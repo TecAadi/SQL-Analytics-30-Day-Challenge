@@ -1,0 +1,14 @@
+# Day 1 – Second Highest Salary
+
+## 📌 Problem Statement
+
+Write a SQL query to find the second highest salary from the `Employee` table.
+
+---
+
+⚡ Optimized Approach
+
+```sql
+SELECT MAX(salary) 
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
