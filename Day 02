@@ -1,0 +1,37 @@
+📅 Day 2 – SQL Problem Solving
+🧠 Problem Focus:
+
+Rising Temperature (Self Join & Date Comparison)
+
+On Day 2, I practiced solving a time-series comparison problem using SQL.
+The objective was to identify days where the temperature increased compared to the previous day.
+
+🔎 Concepts Practiced:
+
+Self Join
+
+Date Functions (DATEDIFF, DATE_ADD)
+
+Row-to-row comparison
+
+Logical filtering using conditions
+
+💻 Solution Approach:
+
+Joined the Weather table with itself
+
+Matched consecutive dates using date functions
+
+Filtered records where today's temperature was higher than yesterday's
+
+
+-- Day 2: Rising Temperature
+-- Objective: Find days where temperature increased compared to the previous day
+
+SELECT a.id
+FROM Weather a
+JOIN Weather b
+ON DATEDIFF(a.recordDate, b.recordDate) = 1
+AND a.temperature > b.temperature;
+
+
