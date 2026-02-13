@@ -1,0 +1,54 @@
+🏆 30 Days SQL Challenge
+📌 Problem Statement
+
+Find the Nth highest salary from the Employee table.
+
+This is a classic SQL interview problem from LeetCode that tests understanding of:
+
+Sorting (ORDER BY)
+
+Handling duplicates (DISTINCT)
+
+Offset logic (LIMIT)
+
+Writing MySQL functions
+
+💡 Approach
+
+To make the solution structured and interview-ready, I implemented a MySQL function:
+
+Declare a variable M
+
+Set M = N - 1
+
+Use LIMIT M, 1 to fetch the required salary
+
+Use DISTINCT to handle duplicate salary values
+
+Source code :
+
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+DECLARE M INT;
+SET M=N-1;
+  RETURN (
+      # Write your MySQL query statement below.
+SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT M, 1
+  );
+END
+
+
+🚀 Key Learnings
+
+How to create and use MySQL stored functions
+
+Why DISTINCT is important in ranking problems
+
+How LIMIT offset, count works internally
+
+Writing cleaner and reusable SQL logic
+
+📈 Progress
+
+Day 03/30 Complete ✅
+Improving SQL fundamentals one problem at a time.
