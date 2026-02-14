@@ -1,0 +1,47 @@
+🚀 Day 04 of 30 Days SQL Challenge
+💡 LeetCode 182 – Duplicate Emails
+
+Today’s problem was about identifying duplicate records from a database.
+
+📌 Problem Statement:
+Given a Person table, find all email addresses that appear more than once.
+
+🧠 Approach
+
+This problem tests understanding of:
+
+GROUP BY
+
+HAVING
+
+Aggregate functions like COUNT()
+
+✅ SQL Solution
+SELECT email
+FROM Person
+GROUP BY email
+HAVING COUNT(email) > 1;
+
+🔍 Why This Works?
+
+GROUP BY email groups identical emails together
+
+COUNT(email) counts occurrences
+
+HAVING COUNT(email) > 1 filters only duplicates
+
+Simple logic, but very important for real-world data cleaning and analysis 📊
+
+🎯 Key Learning
+
+Understanding how to detect duplicates is crucial in:
+
+Data cleaning
+
+Fraud detection
+
+Business reporting
+
+Database optimization
+
+Small problems like this build strong fundamentals 💪
