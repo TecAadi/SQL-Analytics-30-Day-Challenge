@@ -1,0 +1,34 @@
+🚀 Day 05/30 – SQL Challenge | Rank Scores
+
+Today I solved Rank Scores from LeetCode (Problem 178).
+
+📌 Problem Statement:
+Rank the scores in descending order.
+If two people have the same score → same rank.
+No gaps in ranking.
+
+🔎 Key Learning:
+Used DENSE_RANK() window function.
+
+SOURCE CODE:-
+
+SELECT 
+    Score,
+    DENSE_RANK() OVER (ORDER BY Score DESC) AS `Rank`
+FROM Scores;
+
+
+💡 Why DENSE_RANK()?
+
+Same score → Same rank
+
+No skipped ranks
+
+Clean & efficient solution
+
+Today’s takeaway:
+Understanding ranking functions (RANK(), DENSE_RANK(), ROW_NUMBER()) is very important for real-world analytics problems.
+
+Small steps daily → Big growth 📈
+
+#Day05 #30DaysSQLChallenge #LeetCode #SQL #DataAnalytics #Consistency
