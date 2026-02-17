@@ -1,0 +1,36 @@
+🚀 Day 07 of #30DaysOfLeetCode
+
+💻 Problem 183 – Customers Who Never Order
+
+Today I solved this problem using the NOT IN operator.
+
+SELECT Name AS Customers
+FROM Customers
+WHERE Id NOT IN (
+    SELECT CustomerId FROM Orders
+);
+
+🧠 My View:
+
+This question is easy, but only if you clearly understand the use of the NOT operator.
+
+The logic is simple:
+
+Extract all CustomerId from Orders
+
+Use NOT IN to filter customers whose Id is not present
+
+Rename the column as Customers (important for LeetCode output)
+
+At first, it looks very basic.
+But this question strengthens the concept of filtering with subqueries.
+
+One small thing I learned today 👇
+⚠️ If the subquery contains NULL, NOT IN may not work as expected.
+That’s why sometimes LEFT JOIN or NOT EXISTS is safer.
+
+Small problem.
+Clear logic.
+Better SQL thinking every day 💪
+
+#SQL #LeetCode #30DaysChallenge #DataAnalytics #LearningJourney #ProblemSolving
