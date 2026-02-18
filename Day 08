@@ -1,0 +1,44 @@
+Day 08/30 – LeetCode 184 | Department Highest Salary
+
+Today’s SQL problem helped me strengthen my understanding of JOIN + GROUP BY + Derived Tables.
+
+🔎 Problem:
+Find employees who earn the highest salary in each department.
+
+💡 Instead of using a correlated subquery, I used a more optimized approach:
+
+1️⃣ First, calculate the maximum salary per department
+2️⃣ Then, join it back with the Employee table
+3️⃣ Finally, filter employees whose salary matches the department’s maximum
+
+Here’s the solution I implemented:
+
+SELECT d.name AS Department,
+       e.name AS Employee,
+       e.salary AS Salary
+FROM Employee e
+JOIN Department d
+  ON e.departmentId = d.id
+JOIN (
+    SELECT departmentId, MAX(salary) AS max_salary
+    FROM Employee
+    GROUP BY departmentId
+) m
+ON e.departmentId = m.departmentId
+AND e.salary = m.max_salary;
+
+
+🧠 Key Learnings:
+
+How GROUP BY helps aggregate data
+
+How derived tables (subqueries in JOIN) work
+
+Writing more efficient queries instead of correlated subqueries
+
+Handling cases where multiple employees share the same highest salary
+
+Consistency > Motivation 🚀
+8/30 completed. Let’s keep going.
+
+#SQL #LeetCode #DataAnalytics #30DaysOfCode #LearningJourney
