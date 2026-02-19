@@ -1,0 +1,32 @@
+🚀 Day 09 of 30 Days SQL Challenge
+
+Today I solved LeetCode 196 – Delete Duplicate Emails.
+
+The task was simple but tricky 👇
+Delete duplicate email records from the Person table, while keeping the record with the smallest id.
+
+🧠 Key Insight
+
+Instead of using complex logic, we can use self join.
+
+💡 Solution:
+DELETE p1
+FROM Person p1
+JOIN Person p2
+ON p1.email = p2.email
+AND p1.id > p2.id;
+
+🔎 What I Learned Today:
+
+Self Join can be very powerful.
+
+When two rows have same email, delete the one with larger id.
+
+SQL problems are more about thinking clearly than writing long queries.
+
+Sometimes the cleanest solution is the smartest one.
+
+Every day I’m understanding SQL more deeply.
+Small steps. Consistency. Growth. 📈
+
+#Day09 #30DaysChallenge #SQL #LeetCode #DataEngineering #Consistency #LearningInPublic
