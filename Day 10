@@ -1,0 +1,47 @@
+🚀 Day 10 of #30DaysOfLeetCode
+
+Today I solved Sales Person (Problem 607) on LeetCode.
+
+📌 Problem Statement:
+
+ Find the names of salespersons who did NOT have any orders with the company named "RED".
+
+
+
+#  MySQL query statement below
+
+
+
+select name 
+
+from SalesPerson
+
+where Sales_id  not in (
+
+    select Sales_id 
+
+    from orders 
+
+    where Com_id=(
+
+        select com_id 
+
+        from Company
+
+        where name = 'RED'
+
+    ) 
+
+);
+
+
+
+SQL is not just about writing queries.
+
+ It’s about understanding how databases actually evaluate logic.
+
+Day by day, I’m strengthening my fundamentals.
+
+Consistency > Motivation 💪
+
+#Day10 #LeetCode #SQL #ProblemSolving #LearningInPublic #CodingJourney
