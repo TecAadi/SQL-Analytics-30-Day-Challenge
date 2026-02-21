@@ -1,0 +1,49 @@
+Day 11 of 30 Days of SQL 💻🔥
+
+Today I solved the Employee Bonus problem.
+
+📝 Problem Statement:
+
+ We are given two tables: Employee and Bonus.
+
+ The task is to find employees whose bonus is less than 1000.
+
+ Also, employees who did not receive any bonus should be included.
+
+💡 Key Learning:
+
+ The important concept here is LEFT JOIN.
+
+
+
+💻 SQL Solution:
+
+
+
+
+
+SELECT e.name, b.bonus
+
+FROM Employee e
+
+LEFT JOIN Bonus b
+
+ON e.empId = b.empId
+
+WHERE b.bonus < 1000 OR b.bonus IS NULL;
+
+
+
+🎯 What I Learned Today:
+
+Importance of LEFT JOIN
+
+Handling NULL values correctly
+
+Writing clean filtering conditions
+
+Consistency > Motivation 🚀
+
+ See you tomorrow for Day 12.
+
+#30DaysOfSQL #LearningInPublic #SQLJourney #DataAnalytics
