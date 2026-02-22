@@ -1,0 +1,49 @@
+Day 12/30 – SQL Challenge 💻🔥
+
+Today I solved LeetCode 595 – Big Countries
+
+📌 Problem Summary:
+
+ We are given a World table containing country details.
+
+ A country is considered “Big” if:
+
+🌍 Area ≥ 3,000,000
+
+ OR
+
+👥 Population ≥ 25,000,000
+
+🎯 Goal:
+
+ Return the name, population, and area of big countries.
+
+💡 SQL Solution:
+
+
+
+
+
+SELECT name, population, area
+
+FROM World
+
+WHERE area >= 3000000
+
+   OR population >= 25000000;
+
+
+
+🧠 Key Learning:
+
+Using WHERE with OR condition
+
+Understanding how logical operators filter data
+
+Clean and readable query matters
+
+Consistency > Motivation.
+
+ 12 days done. Still building discipline. 🔥
+
+#Day12 #30DaysOfCode #SQL #LeetCode #LearningInPublic #Consistency
