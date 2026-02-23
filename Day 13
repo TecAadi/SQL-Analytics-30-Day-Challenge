@@ -1,0 +1,57 @@
+🚀 Day 13 / 30 – Small Wins, Big Momentum
+
+Today I solved LeetCode 511 – Game Play Analysis I.
+
+At first glance, it looked like a basic SQL problem.
+
+ But it reminded me of something important:
+
+👉 Simplicity is powerful.
+
+🧠 Problem Insight:
+
+We needed to find the first login date for each player.
+
+The logic?
+
+Group by player_id
+
+Use MIN(event_date)
+
+Return the earliest activity per player
+
+✅ Solution:
+
+
+
+
+
+SELECT 
+
+    player_id,
+
+    MIN(event_date) AS first_login
+
+FROM Activity
+
+GROUP BY player_id;
+
+
+
+💡 What I Learned Today:
+
+Mastering fundamentals > chasing complexity
+
+SQL aggregation functions are extremely powerful
+
+Clean queries reflect clear thinking
+
+Every day doesn’t need to be dramatic.
+
+ Some days are about strengthening the basics.
+
+Consistency builds confidence.
+
+ See you on Day 14 🚀
+
+#Day13 #30DaysChallenge #SQL #LeetCode #LearningJourney #Consistency #Growth
