@@ -1,0 +1,59 @@
+🚀 Day 14 of #30DaysOfLeetCode
+🔺 Problem 610 – Triangle Judgement
+
+Today’s problem was a simple yet logical SQL question based on basic mathematics.
+
+🧠 Problem Summary
+
+We are given three columns:
+
+x
+
+y
+
+z
+
+Each row represents three sides of a triangle.
+
+We need to determine whether these sides can form a valid triangle.
+
+📐 Key Concept – Triangle Inequality Rule
+
+A triangle is valid if:
+
+x + y > z
+
+x + z > y
+
+y + z > x
+
+If all conditions are true → "Yes"
+Otherwise → "No"
+
+🧑‍💻 SQL Solution
+SELECT 
+    x,
+    y,
+    z,
+    CASE 
+        WHEN x + y > z 
+         AND x + z > y 
+         AND y + z > x 
+        THEN 'Yes'
+        ELSE 'No'
+    END AS triangle
+FROM Triangle;
+📚 What I Learned Today
+
+How to use CASE in SQL
+
+Applying mathematical logic inside queries
+
+Writing clean conditional statements
+
+Small problems strengthen fundamentals 💪
+Consistency > Motivation.
+
+See you tomorrow for Day 15 🔥
+
+#LeetCode #SQL #100DaysOfCode #LearningInPublic
