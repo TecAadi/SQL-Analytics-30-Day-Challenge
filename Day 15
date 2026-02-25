@@ -1,0 +1,45 @@
+🚀 Day 15 of 30 Days SQL Challenge
+
+Today’s focus was understanding GROUP BY deeply — and applying it to Problem 619 on LeetCode (Biggest Single Number).
+
+
+
+ Find the largest number that appears only once in the table.
+
+Key idea:
+
+Group numbers using GROUP BY
+
+Filter numbers that appear once using HAVING COUNT(*) = 1
+
+Use MAX() to get the biggest among them
+
+
+
+
+
+SELECT MAX(num) AS num
+
+FROM (
+
+    SELECT num
+
+    FROM MyNumbers
+
+    GROUP BY num
+
+    HAVING COUNT(*) = 1
+
+) AS single_numbers;
+
+
+
+💡 Today’s Learning:
+
+ Understanding why we use GROUP BY makes solving problems much easier.
+
+Halfway through the challenge now —
+
+ Consistency is becoming a habit 💪
+
+#Day15 #30DaysChallenge #SQL #LeetCode #ProblemSolving #LearningInPublic #Consistency
