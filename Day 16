@@ -1,0 +1,26 @@
+🚀 Day 16 of #30DaysOfSQLChallenge
+🔢 LeetCode 584 – Find Customer Referee
+
+Today’s problem focused on filtering records correctly using conditions in SQL.
+
+🧠 Problem Summary:
+
+Given a Customer table,
+We need to find the names of customers whose:
+
+referee_id is NOT equal to 2
+
+OR referee_id is NULL
+
+✅ SQL Solution:
+SELECT name
+FROM Customer
+WHERE referee_id != 2 OR referee_id IS NULL;
+📌 Takeaway:
+
+Even simple filtering problems reinforce the importance of writing precise conditions in SQL. Small details can change the entire result.
+
+Day 16 complete ✅
+Consistency is becoming a habit now.
+
+#LeetCode #SQL #30DaysOfCode #DataAnalytics #LearningJourney #Consistency
