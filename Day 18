@@ -1,0 +1,61 @@
+🚀 Day 18 of 30 Days SQL Challenge
+
+Today’s problem: LeetCode 570 – Managers with at Least 5 Direct Reports
+
+At first, it looked like a basic query.
+
+ But this problem tested one core SQL concept:
+
+👉 GROUP BY + HAVING
+
+🔍 What This Problem Taught Me
+
+How to group records using GROUP BY
+
+How to count direct reports with COUNT(*)
+
+Why we use HAVING instead of WHERE with aggregate functions
+
+How subqueries help filter meaningful results
+
+🧠 Key Learning
+
+You cannot filter aggregated results using WHERE.
+
+ You must use HAVING after GROUP BY.
+
+Small concept.
+
+ Big difference in interviews.
+
+
+
+💻 SQL Solution:
+
+
+
+SELECT name
+
+FROM Employee
+
+WHERE id IN (
+
+    SELECT managerId
+
+    FROM Employee
+
+    GROUP BY managerId
+
+    HAVING COUNT(*) >= 5
+
+);
+
+
+
+📈 18/30 days completed.
+
+ Not stopping. Not slowing down.
+
+ Consistency is building confidence.
+
+#SQL #30DaysChallenge #LearningInPublic #LeetCode #GrowthMindset
