@@ -1,0 +1,37 @@
+🚀 Day 19/30 – LeetCode 620 | Not Boring Movies
+
+Today’s problem was LeetCode 620 – Not Boring Movies.
+
+🧩 Problem Summary:
+
+We are given a Cinema table and need to:
+
+Select movies with odd IDs
+
+Exclude movies where the description is "boring"
+
+Sort results by rating in descending order
+
+💡 SQL Solution:
+SELECT *
+FROM Cinema
+WHERE id % 2 = 1
+  AND description != 'boring'
+ORDER BY rating DESC;
+🔑 Key Learnings:
+
+✅ Used the modulus operator (%) to filter odd numbers
+✅ Applied multiple conditions using AND
+✅ Sorted results using ORDER BY DESC
+✅ Understood how filtering + sorting together improves query precision
+
+📈 Reflection:
+
+Even simple SQL problems strengthen fundamentals.
+Today reinforced how powerful basic operators and conditions can be in real-world database queries.
+
+Consistency > Complexity.
+
+See you on Day 20 💪
+
+#30DaysOfCode #LeetCode #SQL #Consistency #LearningInPublic
