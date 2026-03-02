@@ -1,0 +1,47 @@
+🔥 Day 20 of 30 Days SQL Challenge
+
+Today I solved Problem #627 – Swap Salary on LeetCode.
+
+🧠 Problem:
+
+We are given a table with a column sex containing only:
+
+'m' (male)
+
+'f' (female)
+
+The task was simple but tricky:
+
+ 👉 Swap all 'm' to 'f' and all 'f' to 'm'
+
+ ❌ Without using a temporary table.
+
+💡 Key Learning:
+
+This problem teaches the power of the CASE statement in SQL.
+
+Instead of creating extra tables or variables, we can update values conditionally in a single query:
+
+
+
+UPDATE Salary
+
+SET sex = CASE
+
+            WHEN sex = 'm' THEN 'f'
+
+            ELSE 'm'
+
+          END;
+
+
+
+🚀 Takeaway:
+
+Sometimes the cleanest solution is using conditional logic smartly within the same column.
+
+Consistency > Complexity.
+
+20 days done. 10 more to go. Let’s finish strong 💪
+
+#SQL #LeetCode #100DaysOfCode #LearningInPublic #DataEngineering #Consistency
