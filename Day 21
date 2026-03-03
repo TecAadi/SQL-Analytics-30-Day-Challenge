@@ -1,0 +1,27 @@
+🚀 **Day 21 of #30DaysOfLeetCode Challenge**
+📌 Problem No. 626 – *Exchange Seats*
+
+Today’s problem was about rearranging data smartly using SQL.
+
+💡 **Problem Insight:**
+We are given a table with student IDs and names. The task is to swap the seat IDs of every two consecutive students. If the number of students is odd, the last student remains unchanged.
+
+🔍 **Key Learning:**
+
+* Understanding how to manipulate row order without physically updating the table.
+* Using `CASE` statements effectively.
+* Leveraging conditional logic with `MOD()` in SQL.
+* Thinking in terms of patterns rather than brute force.
+
+🧠 **Approach:**
+
+* If ID is odd → swap with next ID.
+* If ID is even → swap with previous ID.
+* If it's the last odd ID (no pair) → keep it as it is.
+
+This problem improved my logical thinking in SQL and helped me understand conditional transformations better.
+
+Consistency > Motivation 🔥
+On to Day 22 tomorrow!
+
+#SQL #LeetCode #DataStructures #LearningInPublic #Consistency #ProblemSolving
