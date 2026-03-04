@@ -1,0 +1,22 @@
+
+problem no 1045 day 22 of 30 days challenge
+✅ Day 22 of 30 Days Challenge
+🔹 LeetCode Problem 1045 – Customer Who Bought All Products
+Problem:
+ From the Customer table, find customers who bought all the products listed in the Product table.
+
+💻 SQL Solution
+
+SELECT customer_id
+FROM Customer
+GROUP BY customer_id
+HAVING COUNT(DISTINCT product_key) = 
+ (SELECT COUNT(*) FROM Product);
+
+🔍 Explanation
+GROUP BY customer_id → Groups purchases by each customer.
+COUNT(DISTINCT product_key) → Counts unique products bought by that customer.
+Subquery (SELECT COUNT(*) FROM Product) → Total products available.
+HAVING ensures we select only customers who bought all products.
+
+hashtag#SQL hashtag#LeetCode hashtag#30DaysChallenge hashtag#LearningInPublic hashtag#ProblemSolving
