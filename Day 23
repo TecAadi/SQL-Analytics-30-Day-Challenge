@@ -1,0 +1,39 @@
+Day 23 / 30 – SQL Challenge
+
+Solved LeetCode Problem 1084 (Sales Analysis III).
+
+
+
+Today I practiced using GROUP BY, MIN(), MAX(), and HAVING to identify products sold only within a specific date range.
+
+
+
+Key concept: Filtering aggregated data using HAVING.
+
+
+
+✅ SQL Solution
+
+
+
+SELECT p.product_id, p.product_name
+
+FROM Product p
+
+JOIN Sales s
+
+ON p.product_id = s.product_id
+
+GROUP BY p.product_id, p.product_name
+
+HAVING MIN(s.sale_date) >= '2019-01-01'
+
+AND MAX(s.sale_date) <= '2019-03-31';
+
+
+
+
+
+
+
+#SQL #LeetCode #DataAnalytics #LearningInPublic #30DaysChallenge
