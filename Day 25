@@ -1,0 +1,32 @@
+LeetCode Problem 1068 – Product Sales Analysis I
+ Day 25 / 30 Days Challenge 🚀
+Problem Summary
+You are given two tables:
+Sales
+ | sale_id | product_id | year | quantity | price |
+Product
+ | product_id | product_name |
+You need to report:
+product_name
+year
+price
+by joining the Sales and Product tables.
+
+SQL Solution
+
+SELECT 
+ p.product_name,
+ s.year,
+ s.price
+FROM Sales s
+JOIN Product p
+ON s.product_id = p.product_id;
+
+Explanation
+Sales s → contains product_id, year, and price.
+Product p → contains product_id and product_name.
+JOIN both tables using product_id.
+Select:
+product_name from Product
+year and price from Sales
+hashtag#SQL hashtag#LeetCode hashtag#DataAnalytics hashtag#LearningInPublic hashtag#30DaysChallenge
