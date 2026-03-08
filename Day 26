@@ -1,0 +1,42 @@
+Day 26 – 30 Days LeetCode SQL Challenge
+
+ Problem: 586 – Customer Placing the Largest Number of Orders
+
+✅ Problem Summary
+
+You are given a table Orders:
+
+order_number, 
+
+customer_number
+
+Each row represents one order placed by a customer.
+
+👉 You need to find the customer who placed the most orders.
+
+It is guaranteed that only one customer has the maximum orders.
+
+
+
+🧠 SQL Solution
+
+
+
+SELECT customer_number
+
+FROM Orders
+
+GROUP BY customer_number
+
+ORDER BY COUNT(*) DESC
+
+LIMIT 1;
+
+
+
+#LeetCode
+
+#SQLChallenge
+
+#30DaysOfCode
+
