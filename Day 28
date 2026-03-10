@@ -1,0 +1,22 @@
+💻 **Day 28 of #30DaysOfCode**
+
+Solved **Problem 1070 – Product Sales Analysis III** today.
+
+🧠 **Key Concept:** SQL Joins + Aggregation
+
+The challenge was to find the **first year each product was sold** along with its quantity and price.
+This problem reinforced how powerful **GROUP BY and MIN() with JOIN** can be when analyzing data across tables.
+
+**What I learned today:**
+• Using `MIN(year)` to identify the first occurrence
+• Combining subqueries with `JOIN`
+• Writing clean SQL for data analysis
+
+Every problem solved is a small step toward becoming a better problem solver.
+
+📌 **Problem:** 1070
+📌 **Topic:** SQL / Data Analysis
+
+Consistency > Motivation.
+
+#LeetCode #SQL #30DaysOfCode #DataAnalytics #CodingJourney #ProblemSolving
