@@ -1,0 +1,33 @@
+Day 29/30 of my SQL Challenge 💻
+
+Today I solved **Problem 1251 – Average Selling Price** on LeetCode.
+
+This problem focuses on calculating the average selling price of each product using two tables: *Prices* and *UnitsSold*.
+It helped me practice **JOINs, date conditions, and aggregation functions** to derive meaningful business insights from data.
+
+Key idea:
+Average Selling Price = SUM(price × units) / SUM(units)
+
+SQL Solution:
+
+```sql
+SELECT 
+    p.product_id,
+    ROUND(IFNULL(SUM(p.price * u.units) / SUM(u.units), 0), 2) AS average_price
+FROM Prices p
+LEFT JOIN UnitsSold u
+ON p.product_id = u.product_id
+AND u.purchase_date BETWEEN p.start_date AND p.end_date
+GROUP BY p.product_id;
+```
+
+Learning highlights:
+• Using LEFT JOIN to combine tables
+• Applying date range conditions with BETWEEN
+• Using aggregation functions like SUM
+• Formatting results using ROUND
+
+Only **1 more day left** to complete the challenge.
+Consistency really builds confidence in coding. 🚀
+
+#30DaysChallenge #Day29 #LeetCode #SQL #CodingJourney #LearningInPublic #TechCommunity
