@@ -1,0 +1,35 @@
+🚀 Day 30/30 of My SQL Challenge
+
+Today I solved LeetCode Problem 262 – Trips and Users on LeetCode.
+
+📌 Problem Overview
+We are given two tables: Trips and Users.
+The task is to calculate the daily cancellation rate of trips between 2013-10-01 and 2013-10-03, considering only those trips where both the client and the driver are not banned.
+
+Cancellation Rate =
+(Number of cancelled trips) / (Total trips per day)
+
+Cancelled trips include:
+• cancelled_by_driver
+• cancelled_by_client
+
+💻 SQL Source Code
+
+SELECT 
+    t.request_at AS Day,
+    ROUND(
+        SUM(CASE 
+                WHEN t.status IN ('cancelled_by_driver','cancelled_by_client') 
+                THEN 1 ELSE 0 
+            END) / COUNT(*),
+        2
+    ) AS "Cancellation Rate"
+FROM Trips t
+JOIN Users c 
+    ON t.client_id = c.users_id 
+    AND c.banned = 'No'
+JOIN Users d 
+    ON t.driver_id = d.users_id 
+    AND d.banned = 'No'
+WHERE t.request_at BETWEEN '2013-10-01' AND '2013-10-03'
+GROUP BY t.request_at;
